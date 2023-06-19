@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Links } from 'src/models/links';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  @Input() navbarLinks:Links[] | undefined;
   constructor() { }
 
   ngOnInit(): void {

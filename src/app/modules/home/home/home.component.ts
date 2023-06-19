@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Links } from 'src/models/links';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  navbarLinks:Links[] = [
+    {title:'Home', url:'www.google.com'},
+    {title: 'Contact', url: 'www.github.com'}
+  ]
   constructor() { }
 
   ngOnInit(): void {
