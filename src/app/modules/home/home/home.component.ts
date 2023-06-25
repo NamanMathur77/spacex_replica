@@ -9,7 +9,7 @@ import { Links } from 'src/models/links';
 export class HomeComponent implements OnInit {
 
   navbarLinks:Links[] = [
-    {title:'Home', url:'www.google.com'},
+    {title:'Home', url:'https://api.spacexdata.com/v3/rockets'},
     {title: 'Contact', url: 'www.github.com'}
   ]
   constructor() { }

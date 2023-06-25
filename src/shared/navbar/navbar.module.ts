@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeservicesService } from 'src/services/homeservices.service';
 
 
 
@@ -13,6 +14,9 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     CommonModule
+  ],
+  providers:[
+    HomeservicesService
   ]
 })
 export class NavbarModule { }
