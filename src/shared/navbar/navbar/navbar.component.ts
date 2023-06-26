@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Links } from 'src/models/links';
 import { HomeservicesService } from 'src/services/homeservices.service';
 
@@ -9,6 +9,7 @@ import { HomeservicesService } from 'src/services/homeservices.service';
 })
 export class NavbarComponent implements OnInit {
   @Input() navbarLinks: Links[] | undefined;
+  @Output() clickedLink = new EventEmitter<any>;
   constructor(private homeService:HomeservicesService) {}
 
   ngOnInit(): void {}
@@ -19,8 +20,6 @@ export class NavbarComponent implements OnInit {
     this.showOptions = !this.showOptions;
   }
   optionClicked(url:string = ''){
-    this.homeService.getData(url).subscribe((data)=>{
-      console.log(data);
-    });
+    this.clickedLink.emit(url);
   }
 }
