@@ -10,7 +10,7 @@ import { HomeservicesService } from 'src/services/homeservices.service';
 export class HomeComponent implements OnInit {
 
   navbarLinks:Links[] = [
-    {title:'Home', url:'https://api.spacexdata.com/v3/rockets'},
+    {title:'Falcon 9', url:'https://api.spacexdata.com/v3/rockets/falcon9'},
     {title: 'Contact', url: 'www.github.com'}
   ]
   constructor(private homeService:HomeservicesService) { }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { NavbarModule } from 'src/shared/navbar/navbar.module'
 import { HomeservicesService } from 'src/services/homeservices.service';
+import { CoverModule } from 'src/shared/cover/cover.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { HomeservicesService } from 'src/services/homeservices.service';
   ],
   imports: [
     CommonModule,
-    NavbarModule
+    NavbarModule,
+    CoverModule
   ],
   providers: [
     HomeservicesService
