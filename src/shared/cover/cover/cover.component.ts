@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CoverComponent implements OnInit {
 
   @Input() coverImage:string="";
+  @Input() RocketName:string = "";
   constructor() { }
 
   ngOnInit(): void {
