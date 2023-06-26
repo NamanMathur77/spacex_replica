@@ -14,12 +14,15 @@ export class HomeComponent implements OnInit {
     {title: 'Contact', url: 'www.github.com'}
   ]
   constructor(private homeService:HomeservicesService) { }
-
+  RocketData:any;
+  coverImage = '';
   ngOnInit(): void {
   }
   clickedLink(url:any){
     this.homeService.getData(url).subscribe((data)=>{
-      console.log(data);
+      this.RocketData = data;
+      console.log(this.RocketData)
+      this.coverImage = this.RocketData.flickr_images[0];
     });
   }
 
