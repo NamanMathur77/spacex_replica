@@ -12,7 +12,9 @@ export class NavbarComponent implements OnInit {
   @Output() clickedLink = new EventEmitter<any>;
   constructor(private homeService:HomeservicesService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.optionClicked('https://api.spacexdata.com/v3/rockets/falcon9')
+  }
   collapsed = true;
   showOptions = false;
   toggleCollapsed(): void {
