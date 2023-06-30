@@ -11,11 +11,14 @@ export class HomeComponent implements OnInit {
 
   navbarLinks:Links[] = [
     {title:'Falcon 9', url:'https://api.spacexdata.com/v3/rockets/falcon9'},
-    {title: 'Contact', url: 'www.github.com'}
+    {title: 'Falcon 1', url: 'https://api.spacexdata.com/v3/rockets/falcon1'},
+    {title: 'Falcon Heavy', url: 'https://api.spacexdata.com/v3/rockets/falconheavy'},
+    {title: 'StarShip', url: 'https://api.spacexdata.com/v3/rockets/starship'},
   ]
   constructor(private homeService:HomeservicesService) { }
   RocketData:any;
   coverImage = '';
+  rocketName = '';
   ngOnInit(): void {
   }
   clickedLink(url:any){
@@ -23,6 +26,8 @@ export class HomeComponent implements OnInit {
       this.RocketData = data;
       console.log(this.RocketData)
       this.coverImage = this.RocketData.flickr_images[0];
+      this.rocketName = this.RocketData.rocket_name;
+
     });
   }
 

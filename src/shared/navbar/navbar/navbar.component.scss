@@ -1,10 +1,13 @@
 .navbar-bg{
+  position: fixed;
+  top:0;
   background-color: transparent;
   color: white;
   justify-content: flex-end;
 }
 .nav-link{
   color: white;
+  cursor: pointer;
 }
 .navbar-collapse{
   justify-content: center;
